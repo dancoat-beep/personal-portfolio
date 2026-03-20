@@ -1,4 +1,4 @@
-// Dark mode toggle
+// ─── Dark mode toggle ───
 const toggle = document.getElementById('theme-toggle');
 const saved = localStorage.getItem('theme');
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -12,7 +12,53 @@ toggle.addEventListener('click', () => {
   localStorage.setItem('theme', next);
 });
 
-// Contact form
+// ─── Smooth reveal on scroll ───
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
+
+document.querySelectorAll('.work-card, .feed-post, .about-grid').forEach((el) => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  observer.observe(el);
+});
+
+// ─── Active nav link on scroll ───
+const sections = document.querySelectorAll('.section');
+const navLinks = document.querySelectorAll('.nav-link');
+
+const navObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach((link) => {
+          link.style.color = link.getAttribute('href') === `#${id}` ? '' : '';
+          if (link.getAttribute('href') === `#${id}`) {
+            link.style.color = 'var(--text)';
+          } else {
+            link.style.color = '';
+          }
+        });
+      }
+    });
+  },
+  { rootMargin: '-50% 0px -50% 0px' }
+);
+
+sections.forEach((section) => navObserver.observe(section));
+
+// ─── Contact form ───
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
 
