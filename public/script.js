@@ -16,7 +16,7 @@ toggle.addEventListener('click', () => {
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const data = new FormData(form);
@@ -29,10 +29,23 @@ form.addEventListener('submit', (e) => {
     return;
   }
 
-  // Simulate sending — replace with your own backend/service
   status.textContent = 'Sending...';
-  setTimeout(() => {
-    status.textContent = 'Thanks! Your message has been sent.';
-    form.reset();
-  }, 800);
+
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, message }),
+    });
+    const result = await res.json();
+
+    if (res.ok) {
+      status.textContent = result.message;
+      form.reset();
+    } else {
+      status.textContent = result.error || 'Something went wrong.';
+    }
+  } catch (err) {
+    status.textContent = 'Failed to send. Please try again.';
+  }
 });
