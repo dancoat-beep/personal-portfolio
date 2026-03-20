@@ -129,7 +129,7 @@ a {
 .hero {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 80px 24px 60px;
+  padding: 120px 24px 100px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 0;
@@ -137,22 +137,22 @@ a {
 
 .hero-name h1 {
   font-size: clamp(4rem, 12vw, 8rem);
-  font-weight: 900;
-  line-height: 0.9;
-  letter-spacing: -0.04em;
+  font-weight: 300;
+  line-height: 0.92;
+  letter-spacing: -0.05em;
   text-transform: uppercase;
 }
 
 .hero-meta {
-  margin-top: 24px;
-  max-width: 360px;
+  margin-top: 40px;
+  max-width: 400px;
 }
 
 .hero-line {
   width: 60px;
   height: 2px;
   background: var(--accent);
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .hero-role {
@@ -161,20 +161,20 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--accent);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .hero-desc {
   font-size: 0.9375rem;
   color: var(--text-secondary);
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
 /* ─── Sections ─── */
 .section {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 60px 24px;
+  padding: 80px 24px;
   border-top: 1px solid var(--border);
 }
 
@@ -182,7 +182,7 @@ a {
   display: flex;
   align-items: baseline;
   gap: 12px;
-  margin-bottom: 32px;
+  margin-bottom: 48px;
 }
 
 .section-header h2 {
@@ -215,7 +215,7 @@ a {
   grid-template-columns: 40px 1fr auto auto;
   align-items: center;
   gap: 20px;
-  padding: 18px 0;
+  padding: 24px 0;
   border-bottom: 1px solid var(--border);
   transition: background 0.1s;
 }
@@ -281,7 +281,7 @@ a {
   display: grid;
   grid-template-columns: 60px 1fr 40px;
   gap: 16px;
-  padding: 20px 0;
+  padding: 28px 0;
   border-bottom: 1px solid var(--border);
   align-items: start;
 }
@@ -377,7 +377,7 @@ a {
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 60px;
 }
 
 .about-lead {
@@ -419,7 +419,7 @@ a {
 .contact-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 28px;
 }
 
 .form-field--full {
@@ -501,7 +501,7 @@ textarea:focus {
 .footer {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 20px 24px 48px;
+  padding: 32px 24px 64px;
   border-top: 1px solid var(--border);
   display: flex;
   justify-content: space-between;
@@ -530,7 +530,7 @@ textarea:focus {
 /* ─── Responsive ─── */
 @media (max-width: 640px) {
   .hero {
-    padding: 50px 20px 40px;
+    padding: 80px 20px 60px;
   }
 
   .hero-name h1 {
@@ -538,7 +538,7 @@ textarea:focus {
   }
 
   .section {
-    padding: 40px 20px;
+    padding: 60px 20px;
   }
 
   .nav {
