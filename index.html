@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name — Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+    <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+    </svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+  </button>
+  <main>
+    <section class="hero">
+      <div class="avatar">
+        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="60" cy="45" r="25" fill="var(--avatar-fill)"/>
+          <ellipse cx="60" cy="110" rx="40" ry="30" fill="var(--avatar-fill)"/>
+        </svg>
+      </div>
+      <h1>Your Name</h1>
+      <p class="bio">Designer & developer crafting thoughtful digital experiences. I love clean code, good typography, and solving problems that matter.</p>
+    </section>
+
+    <section class="projects">
+      <h2>Projects</h2>
+      <ul class="project-list">
+        <li>
+          <a href="https://example.com" target="_blank" rel="noopener">
+            <strong>Project Alpha</strong>
+            <span>A minimal task tracker built with vanilla JS</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://example.com" target="_blank" rel="noopener">
+            <strong>Project Beta</strong>
+            <span>CLI tool for automating daily workflows</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://example.com" target="_blank" rel="noopener">
+            <strong>Project Gamma</strong>
+            <span>Open-source design system for startups</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="contact">
+      <h2>Get in Touch</h2>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Message" rows="4" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <p class="form-status" id="form-status"></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
