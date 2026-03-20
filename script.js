@@ -52,18 +52,17 @@ form.addEventListener('submit', async (e) => {
   status.textContent = 'Sending...';
 
   try {
-    const res = await fetch('/api/contact', {
+    const res = await fetch(form.action, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email, message }),
+      headers: { 'Accept': 'application/json' },
+      body: data,
     });
-    const result = await res.json();
 
     if (res.ok) {
-      status.textContent = result.message;
+      status.textContent = 'Thanks! Your message has been sent.';
       form.reset();
     } else {
-      status.textContent = result.error || 'Something went wrong.';
+      status.textContent = 'Something went wrong. Please try again.';
     }
   } catch (err) {
     status.textContent = 'Failed to send. Please try again.';
