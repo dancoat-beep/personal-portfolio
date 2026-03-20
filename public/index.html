@@ -7,201 +7,210 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Nav -->
   <nav class="nav">
-    <a href="#" class="nav-logo">Daniil Kot</a>
+    <a href="#" class="nav-logo">DK</a>
     <div class="nav-links">
-      <a href="#work" class="nav-link">Work</a>
-      <a href="#feed" class="nav-link">Feed</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#contact" class="nav-link">Contact</a>
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-        <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-        </svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-        </svg>
-      </button>
+      <a href="#work">Work</a>
+      <a href="#feed">Feed</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </div>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+      <svg class="icon-sun" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </button>
   </nav>
 
-  <!-- Hero -->
-  <header class="hero">
-    <p class="hero-label">Film Director</p>
-    <h1 class="hero-title">Daniil Kot</h1>
-    <p class="hero-sub">Stories told through moving images.<br>Based in wherever the work takes me.</p>
-  </header>
+  <main>
 
-  <!-- Work -->
-  <section id="work" class="section">
-    <h2 class="section-title">Selected Work</h2>
-    <div class="work-grid">
-      <a href="#" class="work-card">
-        <div class="work-thumb">
-          <div class="work-placeholder">
-            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+    <!-- Hero -->
+    <header class="hero">
+      <div class="hero-name">
+        <h1>DANIIL<br>KOT</h1>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-line"></div>
+        <p class="hero-role">Film Director</p>
+        <p class="hero-desc">Stories told through moving images. Narrative, commercial, and everything in between.</p>
+      </div>
+    </header>
+
+    <!-- Work -->
+    <section id="work" class="section">
+      <div class="section-header">
+        <h2>SELECTED WORK</h2>
+        <span class="section-count">(04)</span>
+      </div>
+
+      <div class="work-list">
+        <a href="#" class="work-item">
+          <span class="work-num">01</span>
+          <div class="work-details">
+            <h3>Project Title</h3>
+            <p>Narrative</p>
           </div>
-        </div>
-        <div class="work-info">
-          <h3>Project Title</h3>
-          <span class="work-tag">Short Film</span>
-        </div>
-      </a>
-      <a href="#" class="work-card">
-        <div class="work-thumb">
-          <div class="work-placeholder">
-            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span class="work-year">2026</span>
+          <span class="work-arrow">&rarr;</span>
+        </a>
+        <a href="#" class="work-item">
+          <span class="work-num">01</span>
+          <div class="work-details">
+            <h3>Project Title</h3>
+            <p>Commercial</p>
           </div>
-        </div>
-        <div class="work-info">
-          <h3>Project Title</h3>
-          <span class="work-tag">Commercial</span>
-        </div>
-      </a>
-      <a href="#" class="work-card">
-        <div class="work-thumb">
-          <div class="work-placeholder">
-            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span class="work-year">2025</span>
+          <span class="work-arrow">&rarr;</span>
+        </a>
+        <a href="#" class="work-item">
+          <span class="work-num">03</span>
+          <div class="work-details">
+            <h3>Project Title</h3>
+            <p>Music Video</p>
           </div>
-        </div>
-        <div class="work-info">
-          <h3>Project Title</h3>
-          <span class="work-tag">Music Video</span>
-        </div>
-      </a>
-      <a href="#" class="work-card">
-        <div class="work-thumb">
-          <div class="work-placeholder">
-            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          <span class="work-year">2025</span>
+          <span class="work-arrow">&rarr;</span>
+        </a>
+        <a href="#" class="work-item">
+          <span class="work-num">04</span>
+          <div class="work-details">
+            <h3>Project Title</h3>
+            <p>Photography</p>
           </div>
-        </div>
-        <div class="work-info">
-          <h3>Project Title</h3>
-          <span class="work-tag">Photography</span>
-        </div>
-      </a>
-    </div>
-  </section>
+          <span class="work-year">2024</span>
+          <span class="work-arrow">&rarr;</span>
+        </a>
+      </div>
+    </section>
 
-  <!-- Feed -->
-  <section id="feed" class="section">
-    <h2 class="section-title">Feed</h2>
-    <p class="section-desc">Thoughts, behind-the-scenes, and things I find interesting.</p>
-    <div class="feed">
+    <!-- Feed -->
+    <section id="feed" class="section">
+      <div class="section-header">
+        <h2>FEED</h2>
+        <span class="section-label">Thoughts &amp; behind the scenes</span>
+      </div>
 
-      <article class="feed-post feed-post--image">
-        <div class="feed-media">
-          <div class="feed-img-placeholder">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+      <div class="feed">
+        <article class="feed-row">
+          <time>MAR 18</time>
+          <div class="feed-content">
+            <div class="feed-img-placeholder">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            </div>
+            <p>Golden hour on set. There's something about natural light wrapping around a subject that you just can't replicate.</p>
           </div>
-        </div>
-        <div class="feed-body">
-          <p>Golden hour on set. There's something about the way natural light wraps around a subject that you just can't replicate.</p>
-          <time class="feed-date">Mar 18, 2026</time>
-        </div>
-      </article>
+          <span class="feed-type">IMG</span>
+        </article>
 
-      <article class="feed-post feed-post--text">
-        <div class="feed-body">
-          <blockquote>"The eye should learn to listen before it looks."</blockquote>
-          <p>— Robert Frank. Been thinking about this a lot lately. Observation before composition.</p>
-          <time class="feed-date">Mar 12, 2026</time>
-        </div>
-      </article>
-
-      <article class="feed-post feed-post--video">
-        <div class="feed-media">
-          <div class="feed-video-placeholder">
-            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        <article class="feed-row">
+          <time>MAR 12</time>
+          <div class="feed-content">
+            <blockquote>"The eye should learn to listen before it looks."</blockquote>
+            <p class="feed-attr">— Robert Frank. Observation before composition.</p>
           </div>
-        </div>
-        <div class="feed-body">
-          <p>BTS from a recent shoot — testing some new Cooke lenses. The fall-off is dreamy.</p>
-          <time class="feed-date">Mar 5, 2026</time>
-        </div>
-      </article>
+          <span class="feed-type">TXT</span>
+        </article>
 
-      <article class="feed-post feed-post--link">
-        <div class="feed-body">
-          <a href="#" class="feed-link-card">
-            <span class="feed-link-label">Link</span>
-            <span class="feed-link-title">The Art of Visual Storytelling — A Filmmaker's Guide</span>
-            <span class="feed-link-url">filmmakermagazine.com</span>
-          </a>
-          <p>Great read on balancing narrative with visual language. Bookmarking this one.</p>
-          <time class="feed-date">Feb 28, 2026</time>
-        </div>
-      </article>
-
-      <article class="feed-post feed-post--image">
-        <div class="feed-media">
-          <div class="feed-img-placeholder feed-img-placeholder--tall">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+        <article class="feed-row">
+          <time>MAR 05</time>
+          <div class="feed-content">
+            <div class="feed-video-placeholder">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span>BTS — Testing Cooke lenses</span>
+            </div>
+            <p>The fall-off on these primes is dreamy. Shooting some tests before the real thing.</p>
           </div>
-        </div>
-        <div class="feed-body">
-          <p>Location scouting in the mountains. Found this abandoned structure — adding it to the shot list.</p>
-          <time class="feed-date">Feb 20, 2026</time>
-        </div>
-      </article>
+          <span class="feed-type">VID</span>
+        </article>
 
-    </div>
-  </section>
+        <article class="feed-row">
+          <time>FEB 28</time>
+          <div class="feed-content">
+            <a href="#" class="feed-link">The Art of Visual Storytelling — filmmakermagazine.com &nearr;</a>
+            <p>Great read on balancing narrative with visual language. Bookmarking this one.</p>
+          </div>
+          <span class="feed-type">LINK</span>
+        </article>
 
-  <!-- About -->
-  <section id="about" class="section">
-    <h2 class="section-title">About</h2>
-    <div class="about-grid">
-      <div class="about-photo">
-        <div class="about-photo-placeholder">
-          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="60" cy="45" r="25" fill="currentColor" opacity="0.2"/>
-            <ellipse cx="60" cy="110" rx="40" ry="30" fill="currentColor" opacity="0.2"/>
-          </svg>
+        <article class="feed-row">
+          <time>FEB 20</time>
+          <div class="feed-content">
+            <div class="feed-img-placeholder feed-img-placeholder--wide">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            </div>
+            <p>Location scouting in the mountains. Found this abandoned structure — adding it to the shot list.</p>
+          </div>
+          <span class="feed-type">IMG</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="section-header">
+        <h2>ABOUT</h2>
+      </div>
+
+      <div class="about">
+        <div class="about-col">
+          <p class="about-lead">I'm Daniil — a film director and visual storyteller drawn to the spaces between silence and motion.</p>
+          <p>My work spans short films, commercials, music videos, and photography. I care about honest frames, intentional pacing, and the kind of images that stay with you after the screen goes dark.</p>
+        </div>
+        <div class="about-col">
+          <p>When I'm not behind a camera, I'm probably watching something I wish I'd made, reading about light, or wandering somewhere new.</p>
+          <div class="about-links">
+            <a href="https://vimeo.com" target="_blank" rel="noopener">Vimeo &nearr;</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener">Instagram &nearr;</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener">YouTube &nearr;</a>
+          </div>
         </div>
       </div>
-      <div class="about-text">
-        <p class="about-lead">I'm Daniil — a film director and visual storyteller drawn to the spaces between silence and motion.</p>
-        <p>My work spans short films, commercials, music videos, and photography. I care about honest frames, intentional pacing, and the kind of images that stay with you after the screen goes dark.</p>
-        <p>When I'm not behind a camera, I'm probably watching something I wish I'd made, reading about light, or wandering somewhere new.</p>
-        <div class="about-links">
-          <a href="https://vimeo.com" target="_blank" rel="noopener">Vimeo</a>
-          <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <h2 class="section-title">Get in Touch</h2>
-    <p class="section-desc">For collaborations, commissions, or just to say hello.</p>
-    <form id="contact-form" class="contact-form">
-      <div class="form-row">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Your email" required>
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="section-header">
+        <h2>CONTACT</h2>
+        <span class="section-label">For collaborations, commissions, or just to say hello</span>
       </div>
-      <textarea name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-      <p class="form-status" id="form-status"></p>
-    </form>
-  </section>
+
+      <form id="contact-form" class="contact-form">
+        <div class="form-field">
+          <label for="name">NAME</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-field">
+          <label for="email">EMAIL</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-field form-field--full">
+          <label for="message">MESSAGE</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit">SEND MESSAGE &rarr;</button>
+          <p class="form-status" id="form-status"></p>
+        </div>
+      </form>
+    </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="footer-inner">
-      <span>&copy; 2026 Daniil Kot</span>
-      <div class="footer-links">
-        <a href="https://vimeo.com" target="_blank" rel="noopener">Vimeo</a>
-        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
-        <a href="mailto:hello@example.com">Email</a>
-      </div>
+    <span>&copy; 2026 DANIIL KOT</span>
+    <div class="footer-links">
+      <a href="https://vimeo.com" target="_blank" rel="noopener">Vimeo</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:hello@example.com">Email</a>
     </div>
   </footer>
 

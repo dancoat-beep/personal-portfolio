@@ -12,30 +12,9 @@ toggle.addEventListener('click', () => {
   localStorage.setItem('theme', next);
 });
 
-// ─── Smooth reveal on scroll ───
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.1 }
-);
-
-document.querySelectorAll('.work-card, .feed-post, .about-grid').forEach((el) => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  observer.observe(el);
-});
-
 // ─── Active nav link on scroll ───
 const sections = document.querySelectorAll('.section');
-const navLinks = document.querySelectorAll('.nav-link');
+const navLinks = document.querySelectorAll('.nav-links a');
 
 const navObserver = new IntersectionObserver(
   (entries) => {
@@ -43,17 +22,12 @@ const navObserver = new IntersectionObserver(
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute('id');
         navLinks.forEach((link) => {
-          link.style.color = link.getAttribute('href') === `#${id}` ? '' : '';
-          if (link.getAttribute('href') === `#${id}`) {
-            link.style.color = 'var(--text)';
-          } else {
-            link.style.color = '';
-          }
+          link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
         });
       }
     });
   },
-  { rootMargin: '-50% 0px -50% 0px' }
+  { rootMargin: '-40% 0px -60% 0px' }
 );
 
 sections.forEach((section) => navObserver.observe(section));
