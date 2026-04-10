@@ -32,6 +32,61 @@ const navObserver = new IntersectionObserver(
 
 sections.forEach((section) => navObserver.observe(section));
 
+// ─── Vimeo thumbnails (via oEmbed) ───
+document.querySelectorAll('img[data-vimeo-thumb]').forEach(async (img) => {
+  const id = img.dataset.vimeoThumb;
+  try {
+    const res = await fetch(`https://vimeo.com/api/oembed.json?url=https://vimeo.com/${id}&width=1280`);
+    if (!res.ok) throw new Error('oEmbed failed');
+    const data = await res.json();
+    // Request a larger version of the thumbnail
+    const url = data.thumbnail_url.replace(/_\d+x\d+/, '_1280x720');
+    img.src = url;
+  } catch (err) {
+    console.warn('Vimeo thumbnail failed for', id, err);
+  }
+});
+
+// ─── Video lightbox modal ───
+const modal = document.getElementById('video-modal');
+const modalPlayer = document.getElementById('modal-player');
+
+function openVideo(provider, id) {
+  let src = '';
+  if (provider === 'youtube') {
+    src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`;
+  } else if (provider === 'vimeo') {
+    src = `https://player.vimeo.com/video/${id}?autoplay=1&title=0&byline=0&portrait=0`;
+  }
+  modalPlayer.innerHTML = `<iframe src="${src}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+  modal.classList.add('is-open');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+}
+
+function closeVideo() {
+  modal.classList.remove('is-open');
+  modal.setAttribute('aria-hidden', 'true');
+  modalPlayer.innerHTML = '';
+  document.body.classList.remove('modal-open');
+}
+
+document.querySelectorAll('.work-item').forEach((item) => {
+  item.addEventListener('click', () => {
+    const provider = item.dataset.provider;
+    const id = item.dataset.videoId;
+    if (provider && id) openVideo(provider, id);
+  });
+});
+
+modal.querySelectorAll('[data-close]').forEach((el) => {
+  el.addEventListener('click', closeVideo);
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modal.classList.contains('is-open')) closeVideo();
+});
+
 // ─── Contact form ───
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
