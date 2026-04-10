@@ -135,6 +135,10 @@ a {
   gap: 0;
 }
 
+.hero-name {
+  margin-top: 180px;
+}
+
 .hero-name h1 {
   font-size: 0.75rem;
   font-weight: 600;
@@ -145,7 +149,7 @@ a {
 }
 
 .hero-meta {
-  margin-top: 40px;
+  margin-top: 12px;
   max-width: 400px;
 }
 
