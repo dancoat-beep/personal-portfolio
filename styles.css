@@ -377,6 +377,23 @@ a {
   aspect-ratio: 21 / 9;
 }
 
+.feed-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.feed-gallery .feed-img {
+  margin-bottom: 0;
+  aspect-ratio: 3 / 2;
+}
+
+.feed-gallery .feed-img:first-child {
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 9;
+}
+
 .feed-video-placeholder {
   display: flex;
   align-items: center;
