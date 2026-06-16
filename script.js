@@ -71,7 +71,7 @@ function closeVideo() {
   document.body.classList.remove('modal-open');
 }
 
-document.querySelectorAll('.work-item').forEach((item) => {
+document.querySelectorAll('.work-item, .feed-video').forEach((item) => {
   item.addEventListener('click', () => {
     const provider = item.dataset.provider;
     const id = item.dataset.videoId;

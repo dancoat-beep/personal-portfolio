@@ -416,6 +416,36 @@ a {
   transition: background var(--transition);
 }
 
+.feed-video {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: var(--placeholder-bg);
+  cursor: pointer;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.feed-video .feed-img {
+  margin-bottom: 0;
+  transition: transform 0.5s ease;
+}
+
+.feed-video:hover .feed-img {
+  transform: scale(1.03);
+}
+
+.feed-video .work-play {
+  opacity: 0;
+}
+
+.feed-video:hover .work-play,
+.feed-video:focus-visible .work-play {
+  opacity: 1;
+}
+
 .feed-link {
   display: inline-block;
   font-weight: 600;
